@@ -1,10 +1,10 @@
 # Saberes-Mobile-Web
 
-# Sistema de Publicação de Conteúdos Educacionais
+## Sistema de Publicação de Conteúdos Educacionais
 
-Projeto desenvolvido durante o curso técnico em Informática no IFMT.
+Projeto desenvolvido durante o curso técnico em Informática no IFMT, sob orientação do professor Gleiner Rogerys Queiroz.
 
-O sistema consiste em uma aplicação web integrada a um aplicativo mobile, onde professores podem publicar conteúdos e alunos acessam pelo celular.
+O sistema foi idealizado para auxiliar estudantes na preparação para o ENEM, permitindo que professores publiquem conteúdos e que alunos acessem essas informações de forma prática por meio de um aplicativo mobile.
 
 ## Funcionalidades
 
@@ -21,8 +21,14 @@ O sistema consiste em uma aplicação web integrada a um aplicativo mobile, onde
 - HTML, CSS e JavaScript
 - XAMPP (ambiente local)
 
+## Arquitetura do sistema
+
+O sistema é composto por um backend em PHP responsável pela comunicação com o banco de dados MySQL, enquanto o aplicativo mobile consome esses dados para exibição ao usuário.
+
 ## Sobre minha participação
 
-Atuei como principal desenvolvedor do projeto, sendo responsável pelo desenvolvimento do aplicativo mobile (Android), integração entre o aplicativo mobile e o backend em PHP, com consumo de dados do banco MySQL e implementação das funcionalidades principais do sistema.
+Atuei como principal desenvolvedor do projeto, sendo responsável pelo desenvolvimento do aplicativo mobile (Android), integração entre o app e o backend em PHP, e implementação das funcionalidades principais do sistema.
 
-O projeto foi realizado em contexto acadêmico, sob orientação de professor Gleiner Rogerys Marques de Queiroz. 
+## Observações
+
+O projeto foi desenvolvido e executado em ambiente local utilizando XAMPP.
