@@ -12,10 +12,13 @@ if (!email || !senha) {
 }
 
 try {
+    const formData = new FormData();
+    formData.append("email", email);
+    formData.append("senha", senha);
+
     const resp = await fetch(API_BASE + 'professor_login.php', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({ email, senha })
+        method: 'POST',
+        body: formData
     });
     const data = await resp.json();
     if (data.sucesso) {

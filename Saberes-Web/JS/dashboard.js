@@ -71,14 +71,21 @@ if (!titulo || !materia || !serie) {
 }
 
 try {
+    const formData = new FormData();
+    formData.append("professor_id", professorLogado.id);
+    formData.append("titulo", titulo);
+    formData.append("materia", materia);
+    formData.append("serie", serie);
+    formData.append("texto", texto);
+    formData.append("imagens", imagens);
+    formData.append("videos", videos);
+    formData.append("links", links);
+
     const resp = await fetch(API_BASE + 'professor_salvar_conteudo.php', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({
-        professor_id: professorLogado.id,
-        titulo, materia, serie, texto, imagens, videos, links
-    })
+        method: 'POST',
+        body: formData
     });
+
     const data = await resp.json();
     if (data.sucesso) {
     msg.style.color = '#00c853';
@@ -153,16 +160,17 @@ msg.textContent = '';
 if (!texto) return;
 
 try {
+    const formData = new FormData();
+    formData.append("conteudo_id", chatConteudoId);
+    formData.append("aluno_id", chatAlunoId);
+    formData.append("professor_id", professorLogado.id);
+    formData.append("texto", texto);
+
     const resp = await fetch(API_BASE + 'professor_responder_mensagem.php', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({
-        conteudo_id: chatConteudoId,
-        aluno_id: chatAlunoId,
-        professor_id: professorLogado.id,
-        texto
-    })
+        method: 'POST',
+        body: formData
     });
+
     const data = await resp.json();
     if (data.sucesso) {
     document.getElementById('chatTexto').value = '';
